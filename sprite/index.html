@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Affichage aléatoire des sprites</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      .grain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        opacity: 0.5;
+        mix-blend-mode: hard-light;
+      }
+      /* #monCanvas {
+      } */
+    </style>
+  </head>
+  <body>
+    <video class="grain" src="videos/grain.mp4" muted loop autoplay></video>
+    <canvas id="monCanvas" width="1920" height="1800"></canvas>
+    <script
+      type="text/javascript"
+      src="https://ecal-technologies-centre.github.io/e-ink/libraries/clock/clock.js"
+    ></script>
+    <script src="libs/chroma.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://ecal-technologies-centre.github.io/e-ink/libraries/clock/clock_style.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
+    ></script>
+    <script src="libs/gifler.min.js"></script>
+    <script src="utils.js"></script>
+    <script src="images.js"></script>
+    <script src="item.js"></script>
+    <script src="elements.js"></script>
+    <script src="script.js"></script>
+    <script src="sketch.js"></script>
+    <script src="ink.js"></script>
+    <section class="clock hidden">
+      <div class="display">
+        <input
+          type="text"
+          name="Hour"
+          min="0"
+          max="23"
+          value="00"
+          data-old="00"
+        />:<input
+          type="text"
+          name="Minute"
+          min="0"
+          max="59"
+          value="00"
+          data-old="00"
+        />:<input
+          type="text"
+          name="Second"
+          min="0"
+          max="59"
+          value="00"
+          data-old="00"
+        />
+      </div>
+    </section>
+  </body>
+</html>
